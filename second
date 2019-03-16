@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+
+
+int main()
+{
+	char str[] = "1,2,3,4,5",delim[]=",";
+	int size,a[20],i=0,b;int x,s=0;float n;
+	char *ptr = strtok(str, delim);
+	size = strlen(str);
+   
+	while(ptr != NULL)
+	{
+		printf("'%s'\n", ptr);
+		const char *str1 = ptr;
+		
+		sscanf(str1, "%d", &x);
+		s=s+pow(x,2);
+		
+		a[i]=*ptr;
+		i++;
+		ptr = strtok(NULL, delim);
+		n=pow(s/i,0.5);
+		
+	}
+	printf("\n%f",n);
+	
+	
+
+	
+	return 0;
+}
