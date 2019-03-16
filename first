@@ -1,0 +1,38 @@
+
+
+#include <stdio.h>
+
+int main()
+{
+ float num1,num2,result;
+ int option;
+ printf("Enter number1\n");
+ scanf("%f",&num1);
+ printf("Enter number2\n");
+ scanf("%f",&num2);
+ printf("Select the operation:\n1.Add\n2.Sub\n3.Multiply\n4.Divide\n");
+ scanf("%d",&option);
+ switch(option)
+ {
+ case 1:
+ result=num1+num2;
+ case 2:
+ result=num1-num2;
+ case 3:
+ result=num1*num2;
+ case 4:
+ if(num2==0)
+ printf("INVALID");
+ else
+ result=num1/num2;
+ }
+ if(result)
+ printf("Result is %f",result);
+ return 0;
+}
+ 
+ 
+ 
+ 
+ 
+ 
